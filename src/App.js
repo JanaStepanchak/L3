@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import PropTypesDemo from './1_PropTypes';
 // import AdvancedChild from './2_AdvancedChilds';
 import { Toggler, TogglerItem } from './2_AdvancedChilds/toggler';
-// import ControlledForm from './3_ControlledForm';
+//import ControlledForm from './3_ControlledForm';
 
 // import PureComponent from './4_Pure';
 // import MemoComponent from './5_Memo';
@@ -69,7 +69,7 @@ class App extends Component {
 					<TogglerItem value="three" />
 					<TogglerItem value="four" />
 				</Toggler> */}
-				{/* Завдання 1:*/}
+				<h2> Завдання 1: </h2>
 				
 				<Toggler value={gender} label="Gender" action={changeGender}>
 						<TogglerItem value="male" />
@@ -83,8 +83,10 @@ class App extends Component {
 						<TogglerItem value="baseline" />				
 				</Toggler>
 
+				{/*<h2> Завдання 2: </h2>
+				<ControlledForm />  */}
 
-				{/* <ControlledForm /> */}
+				
 
 				{/* <PureComponent /> */}
 				{/* <MemoComponent /> */}

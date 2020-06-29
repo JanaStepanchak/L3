@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Toggler, TogglerItem } from '../2_AdvancedChilds/toggler';
+import { Input } from 'Input';
+//import { Toggler, TogglerItem } from '../2_AdvancedChilds/toggler';
 
-class ControlledForm extends Component{
+/*class ControlledForm extends Component{
 
     state = {
         name: "",
@@ -42,7 +43,51 @@ class ControlledForm extends Component{
             </form>   
         )
     }
-}
+}*/
+
+class ControlledForm extends Component{
+    
+        state = {
+            type: "text",
+            placeholder:"текст для..",
+            value: "",
+            onChangeHandler: null,
+            name: "Завдання 2:"            
+        }
+
+        
+    
+        handler = (e) => {
+            let {  value } = e.target;
+            console.log(e.target);
+          /*  this.setState({
+                [name]: value
+            });*/
+        }
+    
+            
+        render = () => {
+            const { name, type, placeholder, value } = this.state;
+            const { handler } = this;
+    
+            console.log('[Render]');
+            return(
+                <form>            
+                    <div>{name}</div>                
+                    <Input 
+                    type={type}
+                    placeholder={placeholder}
+                    value={value}
+                    onChange={handler}
+
+                    />                
+                </form>   
+            )
+        }
+    }
+
+
+
 
 
 
@@ -66,6 +111,6 @@ class UncontrolledForm extends Component {
             </form> 
         )
     }
-}
+} 
 
-export default UncontrolledForm;
+export default ControlledForm;
